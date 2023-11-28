@@ -14,7 +14,7 @@ regressor = LinearRegression()
 regressor.fit(x, y)
 
 st.header('Pengaruh Pengalaman Kerja Terhadap Gaji', divider='rainbow')
-st.subheader('Prediksi gaji per tahun untuk karyawan di Amerika Serikat')
+st.subheader('Prediksi gaji per bulan untuk karyawan di Amerika Serikat')
 
 with st.form("Penngalaman Kerja"):
 
