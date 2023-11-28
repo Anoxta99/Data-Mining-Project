@@ -5,7 +5,7 @@ from sklearn.linear_model import LinearRegression
 
 df = pd.read_csv('resource/Salary.csv')
 
-x = df["YearsExperiece"].values
+x = df["YearsExperience"].values
 y = df["Salary"].values
 
 x = np.array(x).reshape(-1, 1)
@@ -14,10 +14,11 @@ regressor = LinearRegression()
 regressor.fit(x, y)
 
 st.header('Pengaruh Pengalaman Kerja Terhadap Gaji', divider='rainbow')
+st.subheader('Prediksi gaji per tahun untuk pekerjaan karyawan tetap di Amerika Serikat')
 
 with st.form("Penngalaman Kerja"):
 
-    number = st.number_input("Pengalaman Kerja (Tahun)", min_value=0, placeholder="Masukkan angka...")
+    number = st.number_input("Pengalaman Kerja (Tahun)", format="%0.1f", min_value=0.0, placeholder="Masukkan angka...")
 
     submitted = st.form_submit_button("Submit")
 
