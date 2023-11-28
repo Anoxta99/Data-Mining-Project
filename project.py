@@ -24,4 +24,4 @@ with st.form("Penngalaman Kerja"):
 
 if submitted:
     prediksi = regressor.predict(np.array([number]).reshape(-1, 1))
-    st.info(f"Hasil Prediksi : ${prediksi[0]}")
+    st.info(f"Hasil Prediksi : ${round(prediksi[0], 2)}")
